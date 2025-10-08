@@ -1,0 +1,455 @@
+/* --- Global Styles & Reset --- */
+:root {
+  --primary-color: #5d00a8; /* A deep, professional purple/violet */
+  --secondary-color: #e8bcf0; /* Light accent color */
+  --highlight-color: #ff5733; /* A contrasting, high-impact color (e.g., a deep orange) for metrics */
+  --text-color: #333;
+  --light-text-color: #f0f0f0;
+  --primary-shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Use a modern, professional font */
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding/border are included in element's total width/height */
+}
+
+/* --- Key Metric Emphasis --- */
+.key-metric {
+    color: var(--highlight-color);
+    font-weight: 700; /* Extra bold */
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.1); /* Subtle shadow for punch */
+}
+
+/* --- Navigation Bar --- */
+
+#home {
+  background-color: var(--primary-color);
+  padding: 1.5rem 0; 
+  margin: 0;
+  height: auto;
+  overflow: hidden; /* Clear floats */
+}
+
+/* Style for mobile layout (Default: Logo/Contact on top, Menu stacked below) */
+.profile_name {
+  float: none; 
+  padding: 0 1rem 0.5rem 1rem;
+  color: var(--light-text-color);
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+}
+
+.topdiv {
+  float: none;
+  padding: 0.5rem 0;
+  text-align: center;
+  width: 100%;
+}
+
+.topmenu {
+  color: var(--light-text-color);
+  margin: 0.5rem 0.5rem; 
+  padding: 0.5rem;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-block; /* Allows items to flow horizontally on larger mobile screens */
+  transition: all 0.3s ease;
+}
+
+.topmenu:hover {
+  color: white;
+  font-weight: 700;
+  text-decoration: underline;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.profile_name .contact_info {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center contact info on mobile */
+  margin-top: 5px;
+}
+
+.contact_info img {
+  width: 18px; 
+  margin-right: 5px;
+  float: none;
+}
+
+/* Media Query for Desktop/Tablet Nav (min-width: 768px) */
+@media (min-width: 768px) {
+  #home {
+    padding: 2.5vh 0;
+  }
+  .profile_name {
+    float: left;
+    padding-left: 2rem;
+    font-size: 1.4rem;
+    text-align: left;
+    width: auto;
+  }
+  .topdiv {
+    float: right;
+    padding-right: 1rem;
+    width: auto;
+    padding-top: 0;
+  }
+  .topmenu {
+    margin: 0 1.5rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+  .profile_name .contact_info {
+    justify-content: flex-start;
+  }
+}
+
+/* --- Utility Classes & Containers --- */
+
+.container {
+  display: flex;
+  flex-wrap: wrap; 
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- Titles --- */
+
+h2 {
+  font-size: clamp(1.8rem, 5vw, 2.5rem); /* Responsive font size */
+  text-align: center;
+  color: var(--primary-color);
+  margin: 3rem auto 1rem auto;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.introduction {
+  font-size: clamp(1.4rem, 4vw, 1.8rem);
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+/* --- About Me --- */
+
+#about-me {
+    /* Mobile-First: Stacked layout */
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem; 
+}
+
+#about-me .profile_image {
+  /* Use clamp for fluid sizing: min 200px, preferred 60% of viewport width, max 450px */
+  width: clamp(200px, 60vw, 450px); 
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#about-me .about-content {
+    max-width: 100%; 
+}
+
+#about-me h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+#about-me p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+.download-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s;
+    box-shadow: 0 4px 6px var(--primary-shadow);
+}
+
+.download-button:hover {
+    background-color: #3f007a;
+    transform: translateY(-2px);
+}
+
+/* Media Query for Desktop About Me (min-width: 900px) */
+@media (min-width: 900px) {
+    #about-me {
+        flex-direction: row; /* Horizontal layout on desktop */
+        text-align: left;
+        justify-content: space-around;
+    }
+    #about-me .about-content {
+        max-width: 50%;
+    }
+}
+
+
+/* --- Skills --- */
+
+.all_skills {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 2rem 1rem;
+}
+
+.skill {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  padding: 1.5rem 0.5rem;
+  /* Max width ensures they don't get too big on desktop, but allow wrapping on mobile */
+  width: clamp(100px, 20vw, 150px); 
+  font-size: 1rem;
+  box-shadow: 0 5px 15px var(--primary-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(93, 0, 168, 0.3);
+}
+
+.skill img {
+  height: 40px; 
+  width: auto;
+}
+
+.skills h6 {
+  font-size: 1.1rem;
+  margin: 10px 0 5px 0;
+  font-weight: 700;
+} 
+
+/* --- Projects --- */
+
+.projects-container {
+  padding: 2rem 0;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.projects-container hr {
+  border: 1px solid #eee;
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.project-card {
+  margin: 1rem 0;
+  padding: 0 1rem;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  color: var(--primary-color);
+}
+
+.project-card li {
+  font-size: 1rem;
+  margin-left: 1rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+.project-links {
+    margin-top: 10px;
+    margin-left: 1rem;
+}
+
+.project-link-button {
+    display: inline-block;
+    background-color: white;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 0.5rem 1rem;
+    margin-right: 10px;
+    margin-bottom: 10px; /* Added for stacking on small screens */
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.project-link-button:hover {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Recommendations --- */
+
+.all_recommendations {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.recommendation {
+  font-style: italic;
+  text-align: left;
+  /* Use clamp for responsive width based on screen size */
+  width: clamp(250px, 90vw, 350px); 
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px var(--primary-shadow);
+  border:1px solid #eee;
+  font-size: 1rem;
+  min-height: 150px; 
+}
+
+.recommendation span {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  font-family: Georgia, serif;
+  font-style: normal;
+}
+
+/* --- Scroll to Top Button --- */
+
+.iconbutton{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 2%;
+  bottom: 2%;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  z-index: 100;
+}
+
+.iconbutton:hover {
+    background-color: #3f007a;
+}
+
+/* --- Recommendation Form --- */
+
+fieldset {
+  padding: 25px; 
+  margin: 2rem auto;
+  border: thin solid var(--primary-color);
+  border-radius: 10px;
+  /* Ensure it's responsive but doesn't get too wide on large screens */
+  width: clamp(300px, 90%, 600px); 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+input, textarea {
+  font-family: 'Inter', sans-serif; 
+  margin: 10px 0;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+
+/* --- Buttons (Generic) --- */
+button {
+  background-color: #fff;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  display: block;
+  border-radius: 6px;
+  text-align: center;
+  margin: 20px auto;
+  padding: 10px 20px;
+  width: auto;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: #fff;
+}
+
+/* --- Form Pop-up --- */
+
+.popup {
+  width: clamp(300px, 80vw, 400px);
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  position: fixed;
+  visibility: hidden;
+  padding: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  opacity: 0; /* Prepare for CSS transition */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.popup img {
+  padding-top: 10px;
+  width: 50px;
+}
+
+.popup button {
+  background-color: #fff;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  display: block;
+  border-radius: 6px;
+  text-align: center;
+  margin: 20px auto; 
+  padding: 10px;
+  width: 100px; 
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.popup button:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: 700;
+}

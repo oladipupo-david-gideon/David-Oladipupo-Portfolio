@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>David Oladipupo - Portfolio</title>
+    <!-- Viewport meta tag for responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css"/>
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <div id="home">
+        <div class="profile_name">
+            David Oladipupo
+            <div class="contact_info">
+                <img src="html_finalprojimages/envelope.png" alt="Email Icon"/>
+                oladipupo.david.gideon@gmail.com
+            </div>
+            <div style="clear:both;"></div>
+            <div class="contact_info">
+                <img src="html_finalprojimages/phone.png" alt="Phone Icon"/>
+                +16824006465
+            </div>
+        </div>
+        <div class="topdiv">
+          <a class="topmenu" href="#about-me">About Me</a>
+          <a class="topmenu" href="#skills">Skills</a>
+          <a class="topmenu" href="#projects">Projects</a>
+          <a class="topmenu" href="#recommendations">Recommendations</a>
+        </div>
+      </div>    
+    </nav>
+
+    <!-- About Me -->
+    <section id="about-me" class="container">
+      <div>
+        <!-- professional software dev image -->
+        <img src="html_finalprojimages/html-css-collage-concept-with-person.jpg" class="profile_image" alt="Developer working on a laptop"/>
+      </div>
+
+      <div class="about-content">
+          <h1>
+            Hi, I'm David Oladipupo! <img src="html_finalprojimages/waving-hand.png" width="60px" alt="Waving Hand Emoji"/>
+          </h1>
+          <!-- REVISED PROFILE STATEMENT -->
+          <p>
+            I'm a Computer Science junior at the University of North Texas specializing in <span class="key-metric">front-end development with a strong full-stack foundation</span>. 
+            I have proven experience building scalable web applications using <span class="key-metric">React, JavaScript, and Node.js</span>. I focus on designing robust, performant components, 
+            and I apply professional CI/CD and Agile practices to deliver measurable user solutions. I'm seeking a Software Engineering internship 
+            to contribute to cutting-edge technology and impactful user experiences.
+          </p>
+          <!-- Added CTA for the recruiter -->
+          <a href="Oladipupo_2.pdf" download="David_Oladipupo_Resume.pdf" class="download-button">Download Resume</a>
+      </div>
+    </section>
+              
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Technical Skills</h2>
+      <div style="clear:both;"></div>
+
+      <div class="all_skills">
+        <!-- Core Language Skills -->
+        <div class="skill">
+          <img src="html_finalprojimages/html5.png" alt="HTML5 Icon"/>
+          <h6>HTML5</h6>
+        </div>  
+        <div class="skill">
+          <img src="html_finalprojimages/js.jpeg" alt="JavaScript Icon"/>
+          <h6>JavaScript (ES6+)</h6>
+        </div>  
+        <div class="skill">
+            <img src="html_finalprojimages/CSS3.png" alt="CSS3 Icon"/>
+            <h6>CSS3</h6>
+        </div>
+        <div class="skill">
+            <img src="html_finalprojimages/python_icon.png" alt="CSS3 Icon"/>
+            <h6>Python</h6>
+        </div>
+        
+        <!-- FRAMEWORKS & LIBRARIES -->
+        <div class="skill">
+            <!-- Placeholder for React Icon -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/230px-React-icon.svg.png" alt="React Icon"/>
+            <h6>React</h6>
+        </div>
+        <div class="skill">
+            <!-- Placeholder for Node.js Icon -->
+            <img src="https://nodejs.org/static/images/logo.svg" alt="Node.js Icon"/>
+            <h6>Node.js</h6>
+        </div>
+        <div class="skill">
+            <!-- Placeholder for MySQL Icon -->
+            <img src="https://www.mysql.com/common/logos/logo-mysql-170x115.png" alt="MySQL Icon"/>
+            <h6>MySQL</h6>
+        </div>
+
+        <!-- DEVELOPER TOOLS & PRACTICES -->
+        <div class="skill">
+            <!-- Placeholder for Git Icon -->
+            <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Git Icon"/>
+            <h6>Git / GitHub</h6>
+        </div>
+        <div class="skill">
+            <!-- Placeholder for C++ Icon -->
+            <img src="html_finalprojimages/c++icon.png" alt="C++ Icon"/>
+            <h6>C++ (OOP)</h6>
+        </div>
+
+      </div>
+    </section>
+          
+    <!-- Projects -->
+    <section class="projects" id="projects">
+      <h2>
+        Key Projects
+      </h2>
+      <div style="clear:both;"></div>
+
+        <div id="projects-container" class="projects-container">
+          
+          <!-- Project 1: E-Commerce Web App -->
+          <div class="project-card">
+            <h3>E-Commerce Web App (React)</h3>
+            <ul>
+              <li>Developed a React-based e-commerce application, architecting <span class="key-metric">8+ reusable components</span> to establish a scalable front-end structure.</li>
+              <li>Implemented React Hooks and state management for real-time cart updates, measurably <span class="key-metric">reducing re-render latency by 40%</span>.</li>
+              <li>Deployed via Netlify using <span class="key-metric">CI/CD pipelines</span>, achieving a <span class="key-metric">&lt;2s average load time</span> and ensuring scalability for <span class="key-metric">100+ product entries</span>.</li>
+            </ul>
+            <div class="project-links">
+                <!-- GitHub repository link -->
+                <a href="https://github.com/oladipupo-david-gideon/e-plantShopping.git" target="_blank" class="project-link-button">GitHub Repo</a>
+                <!-- Netlify Live Demo link -->
+                <a href="https://react-plant-shopping.netlify.app/" target="_blank" class="project-link-button">Netlify Live Demo</a>
+            </div>
+          </div>
+          <hr>
+            
+          <!-- Project 2: Library Management System  -->
+          <div class="project-card">
+            <h3>Library Management System (C++)</h3>
+            <ul>
+              <li>Solo-developed a console-based system managing 3 item types (Books, CDs, DVDs), with project scope exceeding <span class="key-metric">1,000 lines of code</span>.</li>
+              <li>Applied OOP principles to create a modular codebase, enabling <span class="key-metric">30% faster integration</span> of new features.</li>
+              <li>Optimized data-handling logic and search algorithms, improving system runtime efficiency by <span class="key-metric">30%</span> compared to the baseline implementation.</li>
+            </ul>
+            <div class="project-links">
+                <!-- GitHub repository link -->
+                <a href="https://github.com/oladipupo-david-gideon/Library-Loan-Management-Project.git" target="_blank" class="project-link-button">GitHub Repo</a>
+            </div>
+          </div>
+          <hr>
+
+          <!-- Project 3: Portfolio Website -->
+          <div class="project-card">
+            <h3>Personal Portfolio Website (HTML/CSS/JS)</h3>
+            <ul>
+              <li>Designed and deployed this fully responsive website, achieving a <span class="key-metric">90+ Google Lighthouse performance score</span>.</li>
+              <li>Applied Git/GitHub version control with structured branching strategies to ensure project reproducibility.</li>
+              <li>Utilized peer testing feedback to implement UI improvements that led to a <span class="key-metric">20% bounce rate reduction</span>, significantly improving user engagement.</li>
+            </ul>
+            <div class="project-links">
+                <!-- GitHub repository link -->
+                <a href="#github-repo-link-placeholder-Portfolio" target="_blank" class="project-link-button">GitHub Repo</a>
+            </div>
+          </div>
+          <!-- Add more projects here -->
+
+        </div>
+    </section>
+    <div style="clear:both;"></div>
+
+    <!-- Recommendations -->
+    <section id="recommendations">
+      <h2>Recommendations</h2>
+      <div style="clear:both;"></div>
+      <div class="all_recommendations" id="all_recommendations">
+        <!-- Existing recommendations remain the same -->
+        <div class="recommendation">
+          <span>&#8220;</span>
+          I had the pleasure of teaching David and was consistently impressed by his curiosity
+          , discipline, and thoughtful approach to problem-solving. He excels at thinking 
+          logically and creatively, often delivering high-quality work ahead of deadlines. 
+          <span>&#8221;</span>
+        </div>
+        <div class="recommendation">
+            <span>&#8220;</span>
+            David quickly proved himself during his time as an Electrical Engineer 
+            Assistant at Fitmax LLC. He showed initiative while troubleshooting systems 
+            and adapted well to both team and solo tasks. David’s calm, solution-focused 
+            mindset made him dependable under pressure.  
+            <span>&#8221;</span>
+        </div>
+        <div class="recommendation">
+            <span>&#8220;</span>
+            David served as Youth President at our church and led with maturity, patience, 
+            and genuine care for others. He taught lessons, supported his peers, and led 
+            by example through consistent service. His humility and responsibility made a 
+            lasting impression on both students and adults.
+            <span>&#8221;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recommendation Form -->
+    <section id="contact">
+      <div class="flex_center">
+        <fieldset>
+          <legend class="introduction">Leave a Recommendation</legend>          
+          <input type="text" placeholder="Name (Optional)"> <br/>
+          <textarea id="new_recommendation" cols="500" rows="10" placeholder="Message"></textarea>
+          <div class="flex_center">
+            <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
+          </div>
+        </fieldset>
+      </div>
+    </section>
+
+    <div class="iconbutton">
+      <a href="#home">
+        <!-- SVG for scroll to top icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="63px">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      </a>
+    </div>
+
+    <div class="popup" id="popup" class="flex_center">
+      <img src="html_finalprojimages/checkmark--outline.svg" alt="Checkmark"/>
+      <h3>Thanks for leaving a recommendation!</h3>
+      <button onclick="showPopup(false)">Ok</button>
+    </div>
+  </body>
+</html>
