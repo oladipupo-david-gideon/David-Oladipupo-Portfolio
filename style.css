@@ -2,7 +2,7 @@
 :root {
   --primary-color: #5d00a8; /* A deep, professional purple/violet */
   --secondary-color: #e8bcf0; /* Light accent color */
-  --highlight-color: #ff5733; /* A contrasting, high-impact color (e.g., a deep orange) for metrics */
+  --highlight-color: #a8421d; 
   --text-color: #333;
   --light-text-color: #f0f0f0;
   --primary-shadow: rgba(0, 0, 0, 0.1);
@@ -244,7 +244,7 @@ h2 {
   width: auto;
 }
 
-.skills h6 {
+.skills h3 {
   font-size: 1.1rem;
   margin: 10px 0 5px 0;
   font-weight: 700;
