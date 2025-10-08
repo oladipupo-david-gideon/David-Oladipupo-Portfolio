@@ -186,7 +186,7 @@
       <div class="flex_center">
         <fieldset>
           <legend class="introduction">Leave a Recommendation</legend>          
-          <input type="text" placeholder="Name (Optional)"> <br/>
+          <input type="text" id="recommendation_name" placeholder="Name (Optional)"> <br/>
           <textarea id="new_recommendation" cols="500" rows="10" placeholder="Message"></textarea>
           <div class="flex_center">
             <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
@@ -204,7 +204,7 @@
     </div>
 
     <div class="popup" id="popup" class="flex_center">
-      <img src="html_finalprojimages/checkmark--outline.svg" alt="Checkmark" width="50" height="50"/>
+      <img src="html_finalprojimages/checkmark--outline.webp" alt="Checkmark" width="50" height="50"/>
       <h3>Thanks for leaving a recommendation!</h3>
       <button onclick="showPopup(false)">Ok</button>
     </div>
