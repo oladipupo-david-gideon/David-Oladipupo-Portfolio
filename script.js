@@ -10,8 +10,9 @@ function addRecommendation() {
     // Create a new 'recommendation' element and set it's value to the user's message
     var element = document.createElement("div");
     element.setAttribute("class", "recommendation");
-    // Added a name input, which we should pull here (assuming the name input has ID 'recommender_name')
-    let nameInput = document.querySelector('input[placeholder="Name (Optional)"]');
+    
+    // IMPROVEMENT: Use the element's explicit ID for selection instead of a placeholder selector
+    let nameInput = document.getElementById('recommendation_name');
     let name = nameInput.value.trim() || "Anonymous";
 
     element.innerHTML = `<span>&#8220;</span>${recommendation.value}<span>&#8221;</span><br><br>- ${name}`;
