@@ -1,38 +1,85 @@
-function addRecommendation() {
-  // Get the message of the new recommendation
-  let recommendation = document.getElementById("new_recommendation");
-  // If the user has left a recommendation, display a pop-up
-  if (recommendation.value != null && recommendation.value.trim() != "") {
-    
-    console.log("New recommendation added");
-    showPopup(true);
+document.addEventListener('DOMContentLoaded', function() {
 
-    // Create a new 'recommendation' element and set it's value to the user's message
-    var element = document.createElement("div");
-    element.setAttribute("class", "recommendation");
-    
-    // IMPROVEMENT: Use the element's explicit ID for selection instead of a placeholder selector
-    let nameInput = document.getElementById('recommendation_name');
-    let name = nameInput.value.trim() || "Anonymous";
+    // --- Main Initializer ---
+    initializeNavbarBehavior();
+    initializeTypingAnimation();
+    initializeScrollAnimations();
 
-    element.innerHTML = `<span>&#8220;</span>${recommendation.value}<span>&#8221;</span><br><br>- ${name}`;
-    
-    // Add this element to the end of the list of recommendations
-    document.getElementById("all_recommendations").appendChild(element); 
-    
-    // Reset the value of the textarea and name input
-    recommendation.value = "";
-    nameInput.value = "";
-  }
-}
+    // 1. Auto-Hiding Navbar
+    function initializeNavbarBehavior() {
+        const navbar = document.getElementById('navbar');
+        if (!navbar) return;
+        let lastScrollY = window.scrollY;
 
-function showPopup(bool) {
-  const popup = document.getElementById('popup');
-  if (bool) {
-    popup.style.visibility = 'visible';
-    popup.style.opacity = '1'; // Added opacity transition in CSS for smooth fade
-  } else {
-    popup.style.visibility = 'hidden';
-    popup.style.opacity = '0';
-  }
-}
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 150 && lastScrollY < window.scrollY) {
+                navbar.classList.add('nav-hidden');
+            } else {
+                navbar.classList.remove('nav-hidden');
+            }
+            lastScrollY = window.scrollY;
+        }, { passive: true });
+    }
+
+    // 2. Hero Typing Animation
+    function initializeTypingAnimation() {
+        const element = document.getElementById('typing-text');
+        if (!element) return;
+
+        const phrases = ["Software Developer.", "Front-End Specialist.", "Website Creator."];
+        let phraseIndex = 0, letterIndex = 0, currentPhrase = '', isDeleting = false;
+
+        function type() {
+            const fullPhrase = phrases[phraseIndex];
+            if (isDeleting) {
+                currentPhrase = fullPhrase.substring(0, letterIndex - 1);
+                letterIndex--;
+            } else {
+                currentPhrase = fullPhrase.substring(0, letterIndex + 1);
+                letterIndex++;
+            }
+            element.innerHTML = currentPhrase;
+            let typeSpeed = 120;
+            if (isDeleting) typeSpeed /= 2;
+            if (!isDeleting && letterIndex === fullPhrase.length) {
+                typeSpeed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && letterIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+            }
+            setTimeout(type, typeSpeed);
+        }
+        type();
+    }
+
+    // 3. Scroll Reveal Animations (Enhanced)
+    function initializeScrollAnimations() {
+        const revealElements = document.querySelectorAll('.reveal');
+        if (revealElements.length === 0) return;
+        
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Apply a staggered delay for reveal elements within the same container
+                    const delay = entry.target.dataset.delay || 150 * index;
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, delay);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(el => {
+            revealObserver.observe(el);
+        });
+        
+        // Handle staggered children in hero section specifically
+        const staggerHeroElements = document.querySelectorAll('.stagger-reveal');
+        staggerHeroElements.forEach((el, index) => {
+            el.style.transitionDelay = `${index * 100}ms`;
+            el.classList.add('visible');
+        });
+    }
+});

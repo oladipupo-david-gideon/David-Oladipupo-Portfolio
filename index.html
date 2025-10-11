@@ -1,212 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>David Oladipupo - Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <title>David Oladipupo | Software Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The professional portfolio of David Oladipupo, a software developer focused on building robust, user-centric applications and experiences.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>DO</text></svg>">
     <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+    <div class="background-grid"></div>
+
+    <header id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo-link">
+                <div class="nav-logo">DO</div>
+                <span>David Oladipupo</span>
+            </a>
+            <nav class="nav-links">
+                <a class="nav-link" href="#about-me">About</a>
+                <a class="nav-link" href="#projects">Projects</a>
+                <a class="nav-link" href="#skills">Skills</a>
+                <a class="nav-link" href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="about-me" class="hero">
+            <div class="hero-content">
+                <h1 class="stagger-reveal">David Oladipupo</h1>
+                <h2 class="stagger-reveal" id="typing-text"></h2>
+                <p class="stagger-reveal">
+                    I build robust, user-centric digital experiences. My passion for clean code and proactive problem-solving led me to embrace an AI-first workflow, allowing me to accelerate development and focus on what truly matters: creating impactful, efficient, and accessible software.
+                </p>
+                <div class="hero-actions stagger-reveal">
+                    <a href="Oladipupo_2.pdf" download="David_Oladipupo_Resume.pdf" class="cta-button">Download Resume</a>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/david-oladipupo-gideon/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.25 6.5 1.75 1.75 0 016.5 8.25zM19 19h-3v-4.75c0-1.4-.5-2.25-1.5-2.25S13 12.85 13 14.25V19h-3v-9h2.9v1.35h.05c.4-.75 1.35-1.35 2.7-1.35 3 0 3.35 2 3.35 4.65z"></path></svg>
+                        </a>
+                        <a href="https://github.com/oladipupo-david-gideon" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.165 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 class="section-title reveal">Key Projects</h2>
+            <div class="project-grid">
+                <div class="project-card reveal">
+                    <div class="project-content">
+                        <span class="project-type">E-Commerce Platform</span>
+                        <h3>React Shopping App</h3>
+                        <p>To deepen my understanding of state management, I built a responsive e-commerce front-end. The core challenge was a real-time cart UI bug, which I resolved by leveraging AI-assisted debugging to refactor state logic, boosting UI responsiveness by 40%.</p>
+                        <div class="project-tags"><span>React</span><span>Redux</span><span>WCAG 2.1</span></div>
+                        <div class="project-links">
+                            <a href="https://react-plant-shopping.netlify.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                            <a href="https://github.com/oladipupo-david-gideon/e-plantShopping.git" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <div class="project-content">
+                        <span class="project-type">University Course Project</span>
+                        <h3>Library Management System</h3>
+                        <p>Tasked with managing hundreds of media records from a file, I engineered a C++ system focused on performance. By proactively optimizing search algorithms and applying core OOP principles, I improved runtime by 30% and made the codebase 30% faster to update.</p>
+                        <div class="project-tags"><span>C++</span><span>OOP</span><span>Data Structures</span><span>Algorithm Optimization</span></div>
+                        <div class="project-links">
+                            <a href="https://github.com/oladipupo-david-gideon/Library-Loan-Management-Project.git" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications">
+            <h2 class="section-title reveal">Certifications & Learning</h2>
+             <div class="cert-grid">
+                <div class="cert-card reveal">
+                    <h3>Introduction to Back-End Development</h3>
+                    <p class="cert-issuer">Issued by Meta | Oct 2025</p>
+                    <a href="https://coursera.org/share/c8f4ad6bbad079f80aa49707b6d2d2cc" target="_blank" rel="noopener noreferrer" class="cert-link">Show Credential</a>
+                </div>
+                <div class="cert-card reveal">
+                    <h3>Introduction to Front-End Development</h3>
+                    <p class="cert-issuer">Issued by Meta | Oct 2025</p>
+                    <a href="https://coursera.org/share/071cd71a0acc00c69099a80418daa6b3" target="_blank" rel="noopener noreferrer" class="cert-link">Show Credential</a>
+                </div>
+                <div class="cert-card reveal">
+                    <h3>Python 101: Develop Your First Python Program</h3>
+                    <p class="cert-issuer">Issued by Coursera Project Network | Oct 2025</p>
+                    <a href="https://coursera.org/share/1b79fdfef1bad533fdea0ca87edcad35" target="_blank" rel="noopener noreferrer" class="cert-link">View Program</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2 class="section-title reveal">Core Technologies</h2>
+            <div class="skills-showcase reveal">
+                <div class="skill-category-card">
+                    <h3>Frontend</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"/><p>HTML5</p></div>
+                        <div class="skill-item"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"/><p>CSS3</p></div>
+                        <div class="skill-item"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"/><p>JavaScript</p></div>
+                        <div class="skill-item"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"/><p>React</p></div>
+                        <div class="skill-item"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" alt="Redux"/><p>Redux</p></div>
+                    </div>
+                </div>
+                <div class="skill-category-card">
+                    <h3>Backend</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"/><p>Node.js</p></div>
+                        <div class="skill-item"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"/><p>Python</p></div>
+                        <div class="skill-item"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++"/><p>C++</p></div>
+                        <div class="skill-item"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" alt="MySQL"/><p>MySQL</p></div>
+                    </div>
+                </div>
+                <div class="skill-category-card">
+                    <h3>Tools & Practices</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"/><p>Git</p></div>
+                        <div class="skill-item"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"/><p>GitHub</p></div>
+                        <div class="skill-item"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code"/><p>VS Code</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="contact-content reveal">
+                <h2>Let's Build Together</h2>
+                <p>I'm currently seeking Summer 2026 internship opportunities where I can contribute to innovative projects and grow as an engineer. My inbox is always open—whether you have a question or just want to connect.</p>
+                <a href="mailto:DavidOladipupo@my.unt.edu" class="cta-button">Say Hello</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 David Oladipupo. Designed & Built with a passion for code.</p>
+    </footer>
+
     <script src="./script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <div id="home">
-        <div class="profile_name">
-            David Oladipupo
-            <div class="contact_info">
-                <img src="html_finalprojimages/envelope.webp" alt="Email Icon"/>
-                oladipupo.david.gideon@gmail.com
-            </div>
-            <div style="clear:both;"></div>
-            <div class="contact_info">
-                <img src="html_finalprojimages/phone.webp" alt="Phone Icon"/>
-                +16824006465
-            </div>
-        </div>
-        <div class="topdiv">
-          <a class="topmenu" href="#about-me">About Me</a>
-          <a class="topmenu" href="#skills">Skills</a>
-          <a class="topmenu" href="#projects">Projects</a>
-          <a class="topmenu" href="#recommendations">Recommendations</a>
-        </div>
-      </div>    
-    </nav>
-
-    <section id="about-me" class="container">
-      <div>
-        <img src="html_finalprojimages/html-css-collage-concept-with-person.webp" 
-             class="profile_image" 
-             alt="Developer working on a laptop" 
-             width="450" 
-             height="300"/>
-      </div>
-
-      <div class="about-content">
-          <h1>
-            Hi, I'm David Oladipupo! 
-            <img src="html_finalprojimages/waving-hand.webp" width="60px" height="60px" alt="Waving Hand Emoji"/>
-          </h1>
-          <p>
-            I'm a Computer Science junior at the University of North Texas specializing in <span class="key-metric">front-end development with a strong full-stack foundation</span>. 
-            I have proven experience building scalable web applications using <span class="key-metric">React, JavaScript, and Node.js</span>. I focus on designing robust, performant components, 
-            and I apply professional CI/CD and Agile practices to deliver measurable user solutions. I'm seeking a Software Engineering internship 
-            to contribute to cutting-edge technology and impactful user experiences.
-          </p>
-          <a href="Oladipupo_2.pdf" download="David_Oladipupo_Resume.pdf" class="download-button">Download Resume</a>
-      </div>
-    </section>
-              
-    <section id="skills">
-      <h2>Technical Skills</h2>
-      <div style="clear:both;"></div>
-
-      <div class="all_skills">
-        <div class="skill">
-          <img src="html_finalprojimages/html5.webp" alt="HTML5 Icon"/>
-          <h3>HTML5</h3>
-        </div>  
-        <div class="skill">
-          <img src="html_finalprojimages/js.webp" alt="JavaScript Icon"/>
-          <h3>JavaScript (ES6+)</h3>
-        </div>  
-        <div class="skill">
-            <img src="html_finalprojimages/CSS3.webp" alt="CSS3 Icon"/>
-            <h3>CSS3</h3>
-        </div>
-        <div class="skill">
-            <img src="html_finalprojimages/python_icon.webp" alt="Python Icon"/>
-            <h3>Python</h3>
-        </div>
-        
-        <div class="skill">
-            <img src="html_finalprojimages/react.webp" alt="React Icon" width="40" height="40"/>
-            <h3>React</h3>
-        </div>
-        <div class="skill">
-            <img src="html_finalprojimages/node.webp" alt="Node.js Icon" width="40" height="40"/>
-            <h3>Node.js</h3>
-        </div>
-        <div class="skill">
-            <img src="html_finalprojimages/mysql.webp" alt="MySQL Icon" width="40" height="40"/>
-            <h3>MySQL</h3>
-        </div>
-
-        <div class="skill">
-            <img src="html_finalprojimages/git_icon.webp" alt="Git Icon" width="40" height="40"/>
-            <h3>Git / GitHub</h3>
-        </div>
-        <div class="skill">
-            <img src="html_finalprojimages/c++icon.webp" alt="C++ Icon"/>
-            <h3>C++ (OOP)</h3>
-        </div>
-
-      </div>
-    </section>
-          
-    <section class="projects" id="projects">
-      <h2>
-        Key Projects
-      </h2>
-      <div style="clear:both;"></div>
-
-        <div id="projects-container" class="projects-container">
-          
-          <div class="project-card">
-            <h3>E-Commerce Web App (React)</h3>
-            <ul>
-              <li>Developed a React-based e-commerce application, architecting <span class="key-metric">8+ reusable components</span> to establish a scalable front-end structure.</li>
-              <li>Implemented React Hooks and state management for real-time cart updates, measurably <span class="key-metric">reducing re-render latency by 40%</span>.</li>
-              <li>Deployed via Netlify using <span class="key-metric">CI/CD pipelines</span>, achieving a <span class="key-metric">&lt;2s average load time</span> and ensuring scalability for <span class="key-metric">100+ product entries</span>.</li>
-            </ul>
-            <div class="project-links">
-                <a href="https://github.com/oladipupo-david-gideon/e-plantShopping.git" target="_blank" class="project-link-button">GitHub Repo</a>
-                <a href="https://react-plant-shopping.netlify.app/" target="_blank" class="project-link-button">Netlify Live Demo</a>
-            </div>
-          </div>
-          <hr>
-            
-          <div class="project-card">
-            <h3>Library Management System (C++)</h3>
-            <ul>
-              <li>Solo-developed a console-based system managing 3 item types (Books, CDs, DVDs), with project scope exceeding <span class="key-metric">1,000 lines of code</span>.</li>
-              <li>Applied OOP principles to create a modular codebase, enabling <span class="key-metric">30% faster integration</span> of new features.</li>
-              <li>Optimized data-handling logic and search algorithms, improving system runtime efficiency by <span class="key-metric">30%</span> compared to the baseline implementation.</li>
-            </ul>
-            <div class="project-links">
-                <a href="https://github.com/oladipupo-david-gideon/Library-Loan-Management-Project.git" target="_blank" class="project-link-button">GitHub Repo</a>
-            </div>
-          </div>
-          <hr>
-
-          <div class="project-card">
-            <h3>Personal Portfolio Website (HTML/CSS/JS)</h3>
-            <ul>
-              <li>Designed and deployed this fully responsive website, achieving a <span class="key-metric">90+ Google Lighthouse performance score</span>.</li>
-              <li>Applied Git/GitHub version control with structured branching strategies to ensure project reproducibility.</li>
-              <li>Utilized peer testing feedback to implement UI improvements that led to a <span class="key-metric">20% bounce rate reduction</span>, significantly improving user engagement.</li>
-            </ul>
-            <div class="project-links">
-                <a href="https://github.com/oladipupo-david-gideon/David-Oladipupo-Portfolio.git" target="_blank" class="project-link-button">GitHub Repo</a>
-            </div>
-          </div>
-          </div>
-    </section>
-    <div style="clear:both;"></div>
-
-    <section id="recommendations">
-      <h2>Recommendations</h2>
-      <div style="clear:both;"></div>
-      <div class="all_recommendations" id="all_recommendations">
-        <div class="recommendation">
-          <span>&#8220;</span>
-          I had the pleasure of teaching David and was consistently impressed by his curiosity
-          , discipline, and thoughtful approach to problem-solving. He excels at thinking 
-          logically and creatively, often delivering high-quality work ahead of deadlines. 
-          <span>&#8221;</span>
-        </div>
-        <div class="recommendation">
-            <span>&#8220;</span>
-            David quickly proved himself during his time as an Electrical Engineer 
-            Assistant at Fitmax LLC. He showed initiative while troubleshooting systems 
-            and adapted well to both team and solo tasks. David’s calm, solution-focused 
-            mindset made him dependable under pressure.  
-            <span>&#8221;</span>
-        </div>
-        <div class="recommendation">
-            <span>&#8220;</span>
-            David served as Youth President at our church and led with maturity, patience, 
-            and genuine care for others. He taught lessons, supported his peers, and led 
-            by example through consistent service. His humility and responsibility made a 
-            lasting impression on both students and adults.
-            <span>&#8221;</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="flex_center">
-        <fieldset>
-          <legend class="introduction">Leave a Recommendation</legend>          
-          <input type="text" id="recommendation_name" placeholder="Name (Optional)"> <br/>
-          <textarea id="new_recommendation" cols="500" rows="10" placeholder="Message"></textarea>
-          <div class="flex_center">
-            <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
-          </div>
-        </fieldset>
-      </div>
-    </section>
-
-    <div class="iconbutton">
-      <a href="#home">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="63px">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      </a>
-    </div>
-
-    <div class="popup" id="popup" class="flex_center">
-      <img src="html_finalprojimages/checkmark--outline.webp" alt="Checkmark" width="50" height="50"/>
-      <h3>Thanks for leaving a recommendation!</h3>
-      <button onclick="showPopup(false)">Ok</button>
-    </div>
-  </body>
+</body>
 </html>
