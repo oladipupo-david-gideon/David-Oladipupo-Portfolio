@@ -21,12 +21,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }, { passive: true });
     }
 
-    // 2. Hero Typing Animation
+    // 2. Hero Typing Animation (UPDATED: Truthful & Aspirational)
     function initializeTypingAnimation() {
         const element = document.getElementById('typing-text');
         if (!element) return;
 
-        const phrases = ["Software Developer.", "Front-End Specialist.", "Website Creator."];
+        // "CS Student" proves your technical base. 
+        // "Data Science Aspirant" shows your direction.
+        const phrases = ["Computer Science Student.", "Data Science Aspirant.", "Python Developer."];
         let phraseIndex = 0, letterIndex = 0, currentPhrase = '', isDeleting = false;
 
         function type() {
@@ -39,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 letterIndex++;
             }
             element.innerHTML = currentPhrase;
-            let typeSpeed = 120;
+            let typeSpeed = 100; 
             if (isDeleting) typeSpeed /= 2;
             if (!isDeleting && letterIndex === fullPhrase.length) {
                 typeSpeed = 2000;
@@ -53,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
         type();
     }
 
-    // 3. Scroll Reveal Animations (Enhanced)
+    // 3. Scroll Reveal Animations
     function initializeScrollAnimations() {
         const revealElements = document.querySelectorAll('.reveal');
         if (revealElements.length === 0) return;
@@ -61,7 +63,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const revealObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach((entry, index) => {
                 if (entry.isIntersecting) {
-                    // Apply a staggered delay for reveal elements within the same container
                     const delay = entry.target.dataset.delay || 150 * index;
                     setTimeout(() => {
                         entry.target.classList.add('visible');
@@ -75,7 +76,6 @@ document.addEventListener('DOMContentLoaded', function() {
             revealObserver.observe(el);
         });
         
-        // Handle staggered children in hero section specifically
         const staggerHeroElements = document.querySelectorAll('.stagger-reveal');
         staggerHeroElements.forEach((el, index) => {
             el.style.transitionDelay = `${index * 100}ms`;
