@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>David Oladipupo | CS & Data Science</title>
+    <title>David Oladipupo | Financial Data Analyst</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of David Oladipupo, a Computer Science student leveraging strong software engineering skills to transition into Data Science and Analytics.">
+    <meta name="description" content="Portfolio of David Oladipupo, a Computer Science student specializing in Financial Analytics, Automated Data Pipelines, and Python Development.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨🏾‍💻</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📈</text></svg>">
     <link rel="stylesheet" href="./style.css"/>
 </head>
 <body>
@@ -22,7 +22,8 @@
             </a>
             <nav class="nav-links">
                 <a class="nav-link" href="#about-me">About</a>
-                <a class="nav-link" href="#projects">Engineering Projects</a>
+                <a class="nav-link" href="#projects">Projects</a>
+                <a class="nav-link" href="#certifications">Certifications</a>
                 <a class="nav-link" href="#skills">Skills</a>
                 <a class="nav-link" href="#contact">Contact</a>
             </nav>
@@ -34,11 +35,15 @@
             <div class="hero-content">
                 <h1 class="stagger-reveal">David Oladipupo</h1>
                 <h2 class="stagger-reveal" id="typing-text"></h2>
+                
                 <p class="stagger-reveal">
-                    I am a Computer Science student bridging the gap between <strong>Software Engineering</strong> and <strong>Data Science</strong>. With a strong foundation in algorithmic logic and backend development, I am currently expanding my expertise into financial data analysis and machine learning.
+                    I am a Computer Science student (3.8 GPA) specializing in <strong>Financial Analytics</strong> and <strong>Automated Data Pipelines</strong>. 
+                    I bridge the gap between algorithmic logic and real-world finance, building deployed applications with <strong>Python, Pandas, and Streamlit</strong> to transform raw market data into actionable visual insights.
                 </p>
+
                 <div class="hero-actions stagger-reveal">
                     <a href="Oladipupo_David.pdf" download="David_Oladipupo_Resume.pdf" class="cta-button">Download Resume</a>
+                    
                     <div class="social-links">
                         <a href="https://www.linkedin.com/in/david-oladipupo-gideon/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.25 6.5 1.75 1.75 0 016.5 8.25zM19 19h-3v-4.75c0-1.4-.5-2.25-1.5-2.25S13 12.85 13 14.25V19h-3v-9h2.9v1.35h.05c.4-.75 1.35-1.35 2.7-1.35 3 0 3.35 2 3.35 4.65z"></path></svg>
@@ -57,25 +62,30 @@
                 
                 <div class="project-card reveal">
                     <div class="project-content">
-                        <span class="project-type">Full Stack & Data Engineering</span>
-                        <h3>E-Commerce API & Frontend</h3>
-                        <p>Designed a data-driven e-commerce platform. The highlight is the custom <strong>RESTful API</strong> (Node.js) that serves deserialized JSON data to the client with sub-7.8ms latency. This project demonstrates my ability to structure, fetch, and manage data efficiently across a full application stack.</p>
-                        <div class="project-tags"><span>Node.js</span><span>API Design</span><span>Redux State</span><span>JSON</span></div>
+                        <span class="project-type">Financial Analytics & Visualization</span>
+                        <h3>Real-Time Market Trend Analyzer 📈</h3>
+                        <p>An automated ETL pipeline that processes <strong>1,200+ daily data points</strong> (5 years of S&P 500 history). It calculates 50-day & 200-day Moving Averages to detect "Golden Cross" signals and visualize market sentiment in real-time.</p>
+                        <div class="project-tags">
+                            <span>Python</span><span>Pandas</span><span>Plotly</span><span>Streamlit</span><span>yfinance API</span>
+                        </div>
                         <div class="project-links">
-                            <a href="https://react-plant-shopping.netlify.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                            <a href="https://github.com/oladipupo-david-gideon/e-plantShopping.git" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            <a href="https://oladipupo-david-finance-dashboard.streamlit.app/" target="_blank" rel="noopener noreferrer">Live Dashboard</a>
+                            <a href="https://github.com/oladipupo-david-gideon" target="_blank" rel="noopener noreferrer">GitHub</a> 
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card reveal">
                     <div class="project-content">
-                        <span class="project-type">Algorithms & Data Persistence</span>
-                        <h3>Library Management System</h3>
-                        <p>A high-performance console application built in C++. I engineered a custom <strong>file I/O system</strong> to serialize and store over 500 records, ensuring data integrity. This project showcases my grasp of data structures, OOP principles, and algorithmic optimization.</p>
-                        <div class="project-tags"><span>C++</span><span>Data Structures</span><span>File I/O</span><span>Optimization</span></div>
+                        <span class="project-type">Algorithmic Modeling</span>
+                        <h3>Interactive Financial Growth Simulator 💰</h3>
+                        <p>A full-stack financial modeling tool enabling real-time sensitivity analysis. Features a custom Python compounding engine that generates <strong>30+ year longitudinal projections</strong> in under 200ms.</p>
+                        <div class="project-tags">
+                            <span>Python</span><span>Simulation Logic</span><span>Data Viz</span><span>Streamlit</span>
+                        </div>
                         <div class="project-links">
-                            <a href="https://github.com/oladipupo-david-gideon/Library-Loan-Management-Project.git" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            <a href="https://oladipupo-david-compounder-app.streamlit.app/" target="_blank" rel="noopener noreferrer">Live Simulator</a>
+                            <a href="https://github.com/oladipupo-david-gideon" target="_blank" rel="noopener noreferrer">GitHub</a> 
                         </div>
                     </div>
                 </div>
@@ -87,19 +97,19 @@
             <h2 class="section-title reveal">Certifications & Learning</h2>
              <div class="cert-grid">
                 <div class="cert-card reveal">
+                    <h3>Data Science Methodology</h3>
+                    <p class="cert-issuer">Issued by IBM | Dec 2025</p>
+                    <a href="https://coursera.org/share/e3df8cf42f4e23904b19aaa6e8632f0a" target="_blank" rel="noopener noreferrer" class="cert-link">Show Credential</a>
+                </div>
+                <div class="cert-card reveal">
+                    <h3>Python for Data Science, AI & Dev</h3>
+                    <p class="cert-issuer">Issued by IBM | Dec 2025</p>
+                    <a href="https://coursera.org/share/2f6354397455fcbb04be5a930eeac37e" target="_blank" rel="noopener noreferrer" class="cert-link">Show Credential</a>
+                </div>
+                <div class="cert-card reveal">
                     <h3>What is Data Science?</h3>
                     <p class="cert-issuer">Issued by IBM | Oct 2025</p>
                     <a href="https://coursera.org/share/41a7edd04a6fbeabdcb8b8c10e1b9891" target="_blank" rel="noopener noreferrer" class="cert-link">Show Credential</a>
-                </div>
-                <div class="cert-card reveal">
-                    <h3>Python 101: Develop Your First Python Program</h3>
-                    <p class="cert-issuer">Issued by Coursera Project Network | Oct 2025</p>
-                    <a href="https://coursera.org/share/1b79fdfef1bad533fdea0ca87edcad35" target="_blank" rel="noopener noreferrer" class="cert-link">Show Credential</a>
-                </div>
-                <div class="cert-card reveal">
-                    <h3>Introduction to Back-End Development</h3>
-                    <p class="cert-issuer">Issued by Meta | Oct 2025</p>
-                    <a href="https://coursera.org/share/c8f4ad6bbad079f80aa49707b6d2d2cc" target="_blank" rel="noopener noreferrer" class="cert-link">Show Credential</a>
                 </div>
             </div>
         </section>
@@ -107,35 +117,36 @@
         <section id="skills">
             <h2 class="section-title reveal">Technical Arsenal</h2>
             <div class="skills-showcase reveal">
+                
                 <div class="skill-category-card">
-                    <h3>Languages & Data</h3>
+                    <h3>Data Science & Analytics</h3>
                     <div class="skills-grid">
                         <div class="skill-item">
                             <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"/>
                             <p>Python</p>
                         </div>
                         <div class="skill-item">
-                            <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++"/>
-                            <p>C++</p>
-                        </div>
-                         <div class="skill-item">
-                            <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"/>
-                            <p>SQL</p>
+                            <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas"/>
+                            <p>Pandas</p>
                         </div>
                         <div class="skill-item">
-                            <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"/>
-                            <p>JavaScript</p>
+                            <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy"/>
+                            <p>NumPy</p>
+                        </div>
+                        <div class="skill-item">
+                            <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter"/>
+                            <p>Notebooks</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="skill-category-card">
-                    <h3>Architecture & Tools</h3>
+                    <h3>Engineering & Tools</h3>
                     <div class="skills-grid">
-                        <div class="skill-item"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"/><p>Node.js</p></div>
-                        <div class="skill-item"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"/><p>React</p></div>
+                        <div class="skill-item"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++"/><p>C++</p></div>
+                        <div class="skill-item"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL"/><p>SQL</p></div>
                         <div class="skill-item"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"/><p>Git</p></div>
-                        <div class="skill-item"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"/><p>GitHub</p></div>
+                        <div class="skill-item"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code"/><p>VS Code</p></div>
                     </div>
                 </div>
             </div>
@@ -151,7 +162,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 David Oladipupo. Aspiring Data Scientist.</p>
+        <p>&copy; 2025 David Oladipupo. Financial Data Analyst & CS Student.</p>
     </footer>
 
     <script src="./script.js"></script>

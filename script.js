@@ -26,9 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const element = document.getElementById('typing-text');
         if (!element) return;
 
-        // "CS Student" proves your technical base. 
-        // "Data Science Aspirant" shows your direction.
-        const phrases = ["Computer Science Student.", "Data Science Aspirant.", "Python Developer."];
+        const phrases = ["Financial Data Analyst.", "Python Developer.", "Building Predictive Models."];
         let phraseIndex = 0, letterIndex = 0, currentPhrase = '', isDeleting = false;
 
         function type() {
