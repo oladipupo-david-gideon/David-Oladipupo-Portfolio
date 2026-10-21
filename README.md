@@ -8,36 +8,29 @@ My personal portfolio website, built with plain HTML, CSS, and JavaScript (no fr
 
 ## What's on the site
 
-A single page with five sections: About, Projects, Certifications, Skills, and Contact. It includes links to my GitHub and LinkedIn, and a download link for my resume.
+A single page with these sections: Home (hero), About, Skills, Projects, Certifications, and Contact. It includes links to my GitHub and LinkedIn, and a download link for my resume.
+
+## Design
+
+An arctic theme: a polar night sky with an aurora, falling snow, snow-capped mountains, and a snowflake that draws itself. The palette is deep navy, ice blue, violet, and white.
 
 ## Features
 
-* **Typing animation** in the hero section, written in JavaScript
-* **Scroll-triggered reveal animations** using the Intersection Observer API, with a short stagger between elements
-* **Auto-hiding navigation bar** that hides when you scroll down and reappears when you scroll up
-* **Theme variables:** colors, fonts, and the transition speed are defined as 10 CSS custom properties in one `:root` block, so styling changes in one place
-* **Responsive layout** with breakpoints at 1080px, 768px, and 480px
+* **Letter-by-letter name reveal** in the hero. JavaScript splits the name into letters and CSS animates them into place
+* **Animated hero scene** made with CSS and inline SVG: aurora ribbons, drifting mountain layers, mist, and a self-drawing snowflake. Stars and snow are created in JavaScript
+* **Auto-hiding navigation bar** that hides when you scroll down and reappears when you scroll up, with a frosted background once you leave the top
+* **Rotating role line** in the hero, done with CSS only
+* **Scroll-triggered reveal animations** using the Intersection Observer API
+* **Glowing card borders** that spin on hover, using CSS `@property`
+* **Theme variables:** colors and fonts are defined as CSS custom properties in one `:root` block, so styling changes in one place
+* **Responsive layout** that adapts down to phone widths
 * **Reduced-motion support:** a `prefers-reduced-motion` rule turns off animations for visitors who ask for it
-* **Smooth scrolling** between sections, and an animated background grid made with CSS
-
-## Performance
-
-Tested with Google PageSpeed Insights on October 4, 2026:
-
-| | Mobile | Desktop |
-|---|---|---|
-| Performance | 93 | 99 |
-| Accessibility | 100 | 100 |
-| Best Practices | 100 | 100 |
-| SEO | 100 | 100 |
-
-Scores vary a little from run to run.
+* **Smooth scrolling** between sections
 
 ## Tech
 
 * HTML5, CSS3, and vanilla JavaScript
-* [Inter](https://fonts.google.com/specimen/Inter) and [Fira Code](https://fonts.google.com/specimen/Fira+Code) from Google Fonts
-* Skill icons from [Devicon](https://devicon.dev/), loaded from a CDN
+* [Syne](https://fonts.google.com/specimen/Syne), [Instrument Serif](https://fonts.google.com/specimen/Instrument+Serif), and [DM Sans](https://fonts.google.com/specimen/DM+Sans) from Google Fonts
 * Hosted on Netlify as a static site
 
 ## Project files
@@ -45,8 +38,8 @@ Scores vary a little from run to run.
 ```
 index.html     Page content and structure
 style.css      Styling, theme variables, animations, and breakpoints
-script.js      Typing animation, scroll reveals, and the hiding navbar
-Oladipupo_David.pdf   Resume (linked from the Download Resume button)
+script.js      Name reveal, stars and snow, and scroll reveals
+Oladipupo_David.pdf   Resume (linked from the Resume buttons)
 ```
 
 ## Run locally
@@ -59,8 +52,9 @@ python -m http.server 8000
 
 ## Known limitations
 
-* On screens 768px wide or narrower, the navigation links are hidden and there is no menu button, so phone visitors scroll instead of using the nav.
-* Skill icons load from an external CDN, so they won't appear offline.
+* On screens 560px wide or narrower, the nav shows only the four section links (the logo and Resume button are hidden to keep it to one row). The Resume button is still in the Contact section.
+* The glowing card borders need a recent browser (they use CSS `@property`). In older browsers the cards still work, with a plain border.
+* Fonts load from Google Fonts, so they won't appear offline.
 
 ## License
 
