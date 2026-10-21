@@ -27,6 +27,19 @@ An arctic theme: a polar night sky with an aurora, falling snow, snow-capped mou
 * **Reduced-motion support:** a `prefers-reduced-motion` rule turns off animations for visitors who ask for it
 * **Smooth scrolling** between sections
 
+## Performance
+
+Tested with Google PageSpeed Insights on October 20, 2026:
+
+| | Mobile | Desktop |
+|---|---|---|
+| Performance | 91 | 99 |
+| Accessibility | 100 | 100 |
+| Best Practices | 100 | 100 |
+| SEO | 100 | 100 |
+
+Scores vary a little from run to run.
+
 ## Tech
 
 * HTML5, CSS3, and vanilla JavaScript
