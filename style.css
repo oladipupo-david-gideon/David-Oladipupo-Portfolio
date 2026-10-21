@@ -59,7 +59,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ice); outline-o
 .section-title {
     margin: 0;
     font-family: var(--display); font-weight: 800;
-    font-size: clamp(40px, 5.4vw, 76px); line-height: 1; letter-spacing: -0.03em;
+    /* Syne is wide: "Certifications" is about 10em, so the size scales down on phones to fit */
+    font-size: clamp(28px, calc((100vw - 48px) / 10.6), 76px); line-height: 1; letter-spacing: -0.03em;
 }
 .section-title em {
     font-family: var(--serif); font-style: italic; font-weight: 400; color: var(--violet);
@@ -221,9 +222,10 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ice); outline-o
 .hero-name {
     margin: 0; color: #fff;
     font-family: var(--display); font-weight: 800;
-    font-size: clamp(52px, 11.5vw, 168px); line-height: .92; letter-spacing: -0.035em;
+    /* "Oladipupo" is about 8.1em wide in Syne, so the size is tied to the screen width to keep it on one line */
+    font-size: clamp(30px, calc((100vw - 48px) / 8.5), 136px); line-height: .92; letter-spacing: -0.035em;
 }
-.name-line { display: block; }
+.name-line { display: block; white-space: nowrap; }
 .mask { display: inline-block; overflow: hidden; padding: .14em .02em .08em; margin: -.14em -.02em -.08em; vertical-align: top; }
 .ch {
     display: inline-block; transform: translateY(112%) rotate(7deg); transform-origin: 0 100%;
@@ -446,6 +448,11 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ice); outline-o
 /* ==========================================================
    RESPONSIVE + REDUCED MOTION
    ========================================================== */
+@media (max-width: 400px) {
+    .project-card { padding: 26px; }
+    .project-card h3 { font-size: 25px; }
+}
+
 @media (max-width: 560px) {
     /* Keep the fixed nav to one slim row on phones */
     .nav-inner { padding: 8px 16px; }
