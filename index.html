@@ -7,205 +7,342 @@
     <meta name="description" content="Portfolio of David Oladipupo, a Computer Science student at the University of North Texas interested in software engineering, data engineering, and cybersecurity.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%2216%22 fill=%22%230A1440%22/><text x=%2232%22 y=%2243%22 font-size=%2630%22 font-family=%22Arial%22 font-weight=%22bold%22 text-anchor=%22middle%22 fill=%22%238FD3FF%22>DO</text></svg>">
     <link rel="stylesheet" href="./style.css"/>
+    <noscript><style>.reveal { opacity: 1; transform: none; filter: none; }</style></noscript>
 </head>
 <body>
-    <div class="background-grid"></div>
+    <a class="skip-link" href="#about">Skip to content</a>
 
-    <header id="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo-link">
-                <div class="nav-logo">DO</div>
-                <span>David Oladipupo</span>
-            </a>
-            <nav class="nav-links">
-                <a class="nav-link" href="#about-me">About</a>
+    <!-- Fixed navigation bar: hides when you scroll down, returns when you scroll up -->
+    <nav id="navbar" class="nav" aria-label="Main">
+        <div class="nav-inner">
+            <a href="#top" class="logo" aria-label="Home">DO<span>.</span></a>
+            <div class="nav-links">
+                <a class="nav-link" href="#about">About</a>
                 <a class="nav-link" href="#projects">Projects</a>
                 <a class="nav-link" href="#certifications">Certifications</a>
-                <a class="nav-link" href="#skills">Skills</a>
                 <a class="nav-link" href="#contact">Contact</a>
-            </nav>
+                <a class="btn btn-ghost btn-small" href="Oladipupo_David.pdf" download="David_Oladipupo_Resume.pdf">Resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+    <header class="hero">
+        <div class="sky" aria-hidden="true"></div>
+        <div class="aurora aurora-1" aria-hidden="true"></div>
+        <div class="aurora aurora-2" aria-hidden="true"></div>
+        <div class="aurora aurora-3" aria-hidden="true"></div>
+        <div class="stars" aria-hidden="true"></div>
+
+        <!-- Mountains, far to near -->
+        <svg class="mtn mtn-far" viewBox="0 0 1440 360" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+            <defs><linearGradient id="gfar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4A62C2"/><stop offset="1" stop-color="#1B2A6E"/></linearGradient></defs>
+            <path fill="url(#gfar)" d="M0 250 L90 200 L170 232 L300 120 L390 205 L470 170 L600 250 L720 140 L830 215 L940 105 L1050 200 L1150 160 L1260 230 L1350 150 L1440 220 L1440 360 L0 360Z"/>
+            <path fill="#E2ECFF" opacity=".92" d="M300 120 L336 154 L317 142 L305 139 L288 137 L266 149Z M470 170 L506 192 L487 187 L475 189 L458 182 L436 185Z M720 140 L756 164 L737 158 L725 159 L708 158 L686 171Z M940 105 L976 136 L957 126 L945 124 L928 124 L906 139Z M1150 160 L1186 183 L1167 177 L1155 179 L1138 172 L1116 174Z M1350 150 L1386 178 L1367 169 L1355 169 L1338 167 L1316 180Z"/>
+        </svg>
+        <div class="mist mist-1" aria-hidden="true"></div>
+        <svg class="mtn mtn-mid" viewBox="0 0 1440 360" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+            <defs><linearGradient id="gmid" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2D4299"/><stop offset="1" stop-color="#0F1A4D"/></linearGradient></defs>
+            <path fill="url(#gmid)" d="M0 290 L110 230 L210 270 L340 180 L450 262 L560 205 L690 285 L800 190 L920 270 L1040 170 L1160 268 L1280 210 L1440 280 L1440 360 L0 360Z"/>
+            <path fill="#EEF4FF" opacity=".95" d="M340 180 L372 203 L355 197 L344 196 L330 193 L310 201Z M560 205 L592 224 L575 220 L564 222 L550 216 L530 221Z M800 190 L832 211 L815 205 L804 206 L790 205 L770 216Z M1040 170 L1072 196 L1055 188 L1044 186 L1030 185 L1010 195Z M1280 210 L1312 224 L1295 222 L1284 226 L1270 221 L1250 224Z"/>
+        </svg>
+        <div class="mist mist-2" aria-hidden="true"></div>
+        <svg class="mtn mtn-near" viewBox="0 0 1440 360" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+            <defs><linearGradient id="gnear" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16246B"/><stop offset="1" stop-color="#070E26"/></linearGradient></defs>
+            <path fill="url(#gnear)" d="M0 330 L140 282 L260 318 L400 236 L520 312 L660 262 L780 325 L900 250 L1030 318 L1170 255 L1300 315 L1440 280 L1440 360 L0 360Z"/>
+            <path fill="#F6FAFF" d="M400 236 L427 253 L413 249 L404 250 L391 247 L374 251Z M660 262 L687 276 L673 274 L664 276 L651 270 L634 271Z M900 250 L927 264 L913 261 L904 264 L891 261 L874 266Z M1170 255 L1197 268 L1183 266 L1174 269 L1161 264 L1144 267Z"/>
+        </svg>
+
+        <div class="snow" aria-hidden="true"></div>
+
+        <div class="hero-inner">
+
+            <!-- Snowflake that draws itself -->
+            <div class="snowflake" aria-hidden="true">
+                <svg viewBox="-250 -250 500 500">
+                    <circle r="64"/>
+                    <circle class="ring-dash" r="236"/>
+                    <path pathLength="1" transform="rotate(0)" d="M0 0 L0 -190 M0 -60 L-34 -94 M0 -60 L34 -94 M0 -110 L-46 -156 M0 -110 L46 -156 M0 -190 L-20 -212 M0 -190 L20 -212"/>
+                    <path pathLength="1" transform="rotate(60)" style="--d:.25s" d="M0 0 L0 -190 M0 -60 L-34 -94 M0 -60 L34 -94 M0 -110 L-46 -156 M0 -110 L46 -156 M0 -190 L-20 -212 M0 -190 L20 -212"/>
+                    <path pathLength="1" transform="rotate(120)" style="--d:.5s" d="M0 0 L0 -190 M0 -60 L-34 -94 M0 -60 L34 -94 M0 -110 L-46 -156 M0 -110 L46 -156 M0 -190 L-20 -212 M0 -190 L20 -212"/>
+                    <path pathLength="1" transform="rotate(180)" style="--d:.75s" d="M0 0 L0 -190 M0 -60 L-34 -94 M0 -60 L34 -94 M0 -110 L-46 -156 M0 -110 L46 -156 M0 -190 L-20 -212 M0 -190 L20 -212"/>
+                    <path pathLength="1" transform="rotate(240)" style="--d:1s" d="M0 0 L0 -190 M0 -60 L-34 -94 M0 -60 L34 -94 M0 -110 L-46 -156 M0 -110 L46 -156 M0 -190 L-20 -212 M0 -190 L20 -212"/>
+                    <path pathLength="1" transform="rotate(300)" style="--d:1.25s" d="M0 0 L0 -190 M0 -60 L-34 -94 M0 -60 L34 -94 M0 -110 L-46 -156 M0 -110 L46 -156 M0 -190 L-20 -212 M0 -190 L20 -212"/>
+                    <path class="fine" pathLength="1" transform="rotate(30)" style="--d:1.6s" d="M0 -30 L-14 -44 M0 -30 L14 -44 M0 -140 L-18 -158 M0 -140 L18 -158"/>
+                    <path class="fine" pathLength="1" transform="rotate(90)" style="--d:1.7s" d="M0 -30 L-14 -44 M0 -30 L14 -44 M0 -140 L-18 -158 M0 -140 L18 -158"/>
+                    <path class="fine" pathLength="1" transform="rotate(150)" style="--d:1.8s" d="M0 -30 L-14 -44 M0 -30 L14 -44 M0 -140 L-18 -158 M0 -140 L18 -158"/>
+                    <path class="fine" pathLength="1" transform="rotate(210)" style="--d:1.9s" d="M0 -30 L-14 -44 M0 -30 L14 -44 M0 -140 L-18 -158 M0 -140 L18 -158"/>
+                    <path class="fine" pathLength="1" transform="rotate(270)" style="--d:2s" d="M0 -30 L-14 -44 M0 -30 L14 -44 M0 -140 L-18 -158 M0 -140 L18 -158"/>
+                    <path class="fine" pathLength="1" transform="rotate(330)" style="--d:2.1s" d="M0 -30 L-14 -44 M0 -30 L14 -44 M0 -140 L-18 -158 M0 -140 L18 -158"/>
+                </svg>
+            </div>
+
+            <div id="top" class="hero-content">
+                <div class="status-pill fade-up" style="--d:.1s">
+                    <span class="pulse-dot"></span>
+                    Open to Summer 2027 internships
+                </div>
+
+                <h1 class="hero-name" data-split>
+                    <span class="name-line">David</span>
+                    <span class="name-line name-line--cool">Oladipupo</span>
+                </h1>
+
+                <div class="roles fade-up" style="--d:1.3s">
+                    <div class="roles-window">
+                        <ul class="roles-list">
+                            <li>Computer science student.</li>
+                            <li>IT associate.</li>
+                            <li>Learning data engineering.</li>
+                            <li>ISC2 certified in cybersecurity.</li>
+                            <li>Computer science student.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p class="hero-lead fade-up" style="--d:1.5s">
+                    I'm looking for internships in software engineering, data engineering, and cybersecurity. I take messy problems and make them simple.
+                </p>
+
+                <div class="hero-actions fade-up" style="--d:1.7s">
+                    <a class="btn btn-main" href="#projects">See my work
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </a>
+                    <a class="btn btn-ghost" href="#contact">Get in touch</a>
+                </div>
+            </div>
+
+            <div class="scroll-cue fade-up" style="--d:2s" aria-hidden="true">
+                <div class="scroll-mouse"></div>
+                Scroll
+            </div>
         </div>
     </header>
 
     <main>
-        <section id="about-me" class="hero">
-            <div class="hero-content">
-                <h1 class="stagger-reveal">David Oladipupo</h1>
-                <h2 class="stagger-reveal" id="typing-text"></h2>
-                <p class="stagger-reveal">
-                    I am a Computer Science senior at the University of North Texas (UNT GPA 3.95), admitted to UNT's <strong>MS in Data Engineering</strong> program and pursuing UNT's undergraduate <strong>cybersecurity</strong> certificate. I hold the ISC2 Certified in Cybersecurity (CC) certification.
-                    I also work in IT at <strong>Prime Controls</strong>, where I deploy and support company laptops and built PowerShell scripts that cut laptop build time by about half.
-                    My projects include Python data apps and a C++ application. I build with AI coding tools and focus on directing the design and on understanding, testing, and debugging the code.
-                </p>
-                <p class="stagger-reveal" style="font-size: 0.95rem; color: var(--text-mid); margin-top: -20px;">
-                    <strong>Interests:</strong> Software Engineering, Data Engineering, Cybersecurity, IT Operations.
-                </p>
-                <div class="hero-actions stagger-reveal">
-                    <a href="Oladipupo_David.pdf" download="David_Oladipupo_Resume.pdf" class="cta-button">Download Resume</a>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/david-oladipupo-gideon/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.25 6.5 1.75 1.75 0 016.5 8.25zM19 19h-3v-4.75c0-1.4-.5-2.25-1.5-2.25S13 12.85 13 14.25V19h-3v-9h2.9v1.35h.05c.4-.75 1.35-1.35 2.7-1.35 3 0 3.35 2 3.35 4.65z"></path></svg>
-                        </a>
-                        <a href="https://github.com/oladipupo-david-gideon" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.165 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z"></path></svg>
-                        </a>
+        <!-- ================= MARQUEE ================= -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+                <div class="marquee-group">
+                    <span>Software engineering</span><span class="diamond"></span><span class="ice">Data engineering</span><span class="diamond"></span><span>Cybersecurity</span><span class="diamond"></span><span class="violet">IT operations</span><span class="diamond"></span>
+                </div>
+                <div class="marquee-group">
+                    <span>Software engineering</span><span class="diamond"></span><span class="ice">Data engineering</span><span class="diamond"></span><span>Cybersecurity</span><span class="diamond"></span><span class="violet">IT operations</span><span class="diamond"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= ABOUT + SKILLS ================= -->
+        <section id="about" class="about">
+            <div class="orb orb-1" aria-hidden="true"></div>
+            <div class="orb orb-2" aria-hidden="true"></div>
+
+            <div class="about-grid">
+                <div class="about-copy reveal">
+                    <div class="eyebrow">About</div>
+                    <h2 class="section-title">Hi, I'm <em>David.</em></h2>
+                    <p>
+                        I'm a Computer Science senior at the University of North Texas with a 3.95 GPA. I've been admitted to UNT's MS in Data Engineering program, and I'm also working toward UNT's undergraduate cybersecurity certificate. I hold the ISC2 Certified in Cybersecurity (CC) certification.
+                    </p>
+                    <p>
+                        I work in IT at Prime Controls, where I deploy and support company laptops. I also built PowerShell scripts that cut laptop build time by about half.
+                    </p>
+                    <p>
+                        My projects include Python data apps and a C++ application. I build with AI coding tools, and my focus is directing the design and then understanding, testing, and debugging the code.
+                    </p>
+                </div>
+
+                <dl class="facts reveal">
+                    <div class="fact"><dt>Studying</dt><dd>B.S. Computer Science, UNT</dd></div>
+                    <div class="fact"><dt>Next</dt><dd>MS in Data Engineering, UNT</dd></div>
+                    <div class="fact"><dt>Certified</dt><dd>ISC2 Certified in Cybersecurity</dd></div>
+                    <div class="fact"><dt>Working</dt><dd>IT Associate at Prime Controls</dd></div>
+                    <div class="fact"><dt>Looking for</dt><dd>Summer 2027 internships</dd></div>
+                </dl>
+            </div>
+
+            <div id="skills" class="skills">
+                <div class="skills-inner reveal">
+                    <h3>Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-group">
+                            <h4>Programming and tools</h4>
+                            <div class="chips"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">C++</span><span class="chip">Git</span></div>
+                        </div>
+                        <div class="skill-group">
+                            <h4>Web</h4>
+                            <div class="chips"><span class="chip">HTML5</span><span class="chip">CSS3</span></div>
+                        </div>
+                        <div class="skill-group">
+                            <h4>Data</h4>
+                            <div class="chips"><span class="chip">Pandas</span><span class="chip">Plotly</span><span class="chip">Streamlit</span></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects">
-            <h2 class="section-title reveal">Projects</h2>
-            <p class="reveal" style="max-width: 700px; margin: -20px 0 40px;">
-                All projects below were built with AI coding assistance. I led the design and feature decisions, then reviewed and tested the code.
-            </p>
-            <div class="project-grid">
-
-                <div class="project-card reveal">
-                    <div class="project-content">
-                        <span class="project-type">Object-Oriented Programming</span>
-                        <h3>Library Management System 📚</h3>
-                        <p>A console-based C++ application for managing library items. It uses <strong>object-oriented programming</strong> (inheritance and polymorphism) to handle books, CDs, and DVDs, and file I/O so data persists between sessions.</p>
-                        <div class="project-tags">
-                            <span>C++</span><span>OOP</span><span>File I/O</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/oladipupo-david-gideon/Library-Loan-Management-Project" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        </div>
-                    </div>
+        <!-- ================= PROJECTS ================= -->
+        <section id="projects" class="section">
+            <div class="section-head reveal">
+                <div class="section-head-text">
+                    <div class="eyebrow">Projects</div>
+                    <h2 class="section-title">Things I've <em>built.</em></h2>
                 </div>
+                <p class="section-note">All of these were built with AI coding assistance. I led the design and feature decisions, then reviewed and tested the code.</p>
+            </div>
 
-                <div class="project-card reveal">
-                    <div class="project-content">
-                        <span class="project-type">Data Visualization</span>
-                        <h3>Stock Trend Dashboard 📈</h3>
-                        <p>A Streamlit dashboard for exploring stock price trends. Search about 5,300 Nasdaq-listed securities by symbol or company name, or enter any Yahoo Finance ticker (crypto, indices). It shows five years of price history as a candlestick chart with 50-day and 200-day moving averages and a bullish/bearish indicator.</p>
-                        <div class="project-tags">
-                            <span>Python</span><span>Streamlit</span><span>Plotly</span><span>Pandas</span><span>yfinance</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://oladipupo-david-finance-dashboard.streamlit.app/" target="_blank" rel="noopener noreferrer">Live App</a>
-                            <a href="https://github.com/oladipupo-david-gideon/stock-evaluation-dashboard" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="grid">
 
-                <div class="project-card reveal">
-                    <div class="project-content">
-                        <span class="project-type">Interactive Calculator</span>
-                        <h3>Financial Growth Simulator 💰</h3>
-                        <p>An interactive compound-interest calculator built with Python and Streamlit. Sliders set the initial investment, interest rate, and time horizon (up to 50 years), and the app shows the projected final balance and a growth chart.</p>
-                        <div class="project-tags">
-                            <span>Python</span><span>Streamlit</span><span>Pandas</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://oladipupo-david-compounder-app.streamlit.app/" target="_blank" rel="noopener noreferrer">Live Simulator</a>
-                            <a href="https://github.com/oladipupo-david-gideon/my-compounder-app" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        </div>
+                <article class="card project-card reveal">
+                    <span class="card-kicker">01 · Data visualization</span>
+                    <h3>Stock Trend Dashboard</h3>
+                    <p>A Streamlit dashboard for exploring stock price trends. Search about 5,300 Nasdaq-listed securities by symbol or company name, or enter any Yahoo Finance ticker. It shows five years of price history as a candlestick chart with 50-day and 200-day moving averages and a bullish or bearish indicator.</p>
+                    <div class="tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">Plotly</span><span class="tag">Pandas</span><span class="tag">yfinance</span></div>
+                    <div class="card-links">
+                        <a class="card-link" href="https://oladipupo-david-finance-dashboard.streamlit.app/" target="_blank" rel="noopener noreferrer">Live app <span aria-hidden="true">↗</span></a>
+                        <a class="card-link" href="https://github.com/oladipupo-david-gideon/stock-evaluation-dashboard" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
                     </div>
-                </div>
+                </article>
+
+                <article class="card project-card reveal">
+                    <span class="card-kicker">02 · Interactive calculator</span>
+                    <h3>Financial Growth Simulator</h3>
+                    <p>A compound-interest calculator built with Python and Streamlit. Sliders set the starting amount, the interest rate, and the time (up to 50 years). The app then shows the final balance and a growth chart.</p>
+                    <div class="tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">Pandas</span></div>
+                    <div class="card-links">
+                        <a class="card-link" href="https://oladipupo-david-compounder-app.streamlit.app/" target="_blank" rel="noopener noreferrer">Live simulator <span aria-hidden="true">↗</span></a>
+                        <a class="card-link" href="https://github.com/oladipupo-david-gideon/my-compounder-app" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+                    </div>
+                </article>
+
+                <article class="card project-card reveal">
+                    <span class="card-kicker">03 · Object-oriented programming</span>
+                    <h3>Library Management System</h3>
+                    <p>A console C++ app for managing library items. It uses inheritance and polymorphism to handle books, CDs, and DVDs, and file I/O so the data is still there the next time you run it.</p>
+                    <div class="tags"><span class="tag">C++</span><span class="tag">OOP</span><span class="tag">File I/O</span></div>
+                    <div class="card-links">
+                        <a class="card-link" href="https://github.com/oladipupo-david-gideon/Library-Loan-Management-Project" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+                    </div>
+                </article>
 
             </div>
         </section>
 
-        <section id="certifications">
-            <h2 class="section-title reveal">Certifications & Learning</h2>
-            <div class="cert-grid">
+        <!-- ================= CERTIFICATIONS ================= -->
+        <section id="certifications" class="section section-certs">
+            <div class="section-head reveal">
+                <div class="section-head-text">
+                    <div class="eyebrow">Certifications</div>
+                    <h2 class="section-title">Certifications <em>&amp; learning.</em></h2>
+                </div>
+            </div>
 
-                <div class="cert-card reveal">
+            <div class="grid grid-certs">
+
+                <article class="card cert-card reveal">
+                    <div class="cert-top"><span class="badge">Google</span><span class="new-tag">New</span></div>
+                    <h3>AI for Brainstorming and Planning</h3>
+                    <p>Issued by Google on Coursera | Oct 2026</p>
+                    <div><a class="card-link" href="https://coursera.org/share/0b1e403fe1ef307f4d0c2b16a202f59d" target="_blank" rel="noopener noreferrer">Show credential <span aria-hidden="true">↗</span></a></div>
+                </article>
+
+                <article class="card cert-card reveal">
+                    <div class="cert-top"><span class="badge">Google</span><span class="new-tag">New</span></div>
+                    <h3>AI Fundamentals</h3>
+                    <p>Issued by Google on Coursera | Oct 2026</p>
+                    <div><a class="card-link" href="https://coursera.org/share/88ed6a29dbb7498594b9be6a081e299b" target="_blank" rel="noopener noreferrer">Show credential <span aria-hidden="true">↗</span></a></div>
+                </article>
+
+                <article class="card cert-card reveal">
+                    <div class="cert-top"><span class="badge">ISC2</span></div>
                     <h3>Certified in Cybersecurity (CC)</h3>
-                    <p class="cert-issuer">Issued by ISC2 | Apr 2026</p>
-                    <a href="https://www.credly.com/badges/a4d19f61-f8c3-452e-aa62-d19b1aa61a62/linked_in_profile" target="_blank" rel="noopener noreferrer" class="cert-link">Show Credential</a>
-                </div>
+                    <p>Issued by ISC2 | Apr 2026</p>
+                    <div><a class="card-link" href="https://www.credly.com/badges/a4d19f61-f8c3-452e-aa62-d19b1aa61a62/linked_in_profile" target="_blank" rel="noopener noreferrer">Show credential <span aria-hidden="true">↗</span></a></div>
+                </article>
 
-                <div class="cert-card reveal">
+                <article class="card cert-card reveal">
+                    <div class="cert-top"><span class="badge">IBM</span></div>
                     <h3>Tools for Data Science</h3>
-                    <p class="cert-issuer">Issued by IBM | Mar 2026</p>
-                    <a href="https://www.coursera.org/account/accomplishments/verify/Y0WDCATG6MHN" target="_blank" rel="noopener noreferrer" class="cert-link">Show Credential</a>
-                </div>
+                    <p>Issued by IBM | Mar 2026</p>
+                    <div><a class="card-link" href="https://www.coursera.org/account/accomplishments/verify/Y0WDCATG6MHN" target="_blank" rel="noopener noreferrer">Show credential <span aria-hidden="true">↗</span></a></div>
+                </article>
 
-                <div class="cert-card reveal">
+                <article class="card cert-card reveal">
+                    <div class="cert-top"><span class="badge">IBM</span></div>
                     <h3>Data Science Methodology</h3>
-                    <p class="cert-issuer">Issued by IBM | Dec 2025</p>
-                    <a href="https://coursera.org/share/e3df8cf42f4e23904b19aaa6e8632f0a" target="_blank" rel="noopener noreferrer" class="cert-link">Show Credential</a>
-                </div>
+                    <p>Issued by IBM | Dec 2025</p>
+                    <div><a class="card-link" href="https://coursera.org/share/e3df8cf42f4e23904b19aaa6e8632f0a" target="_blank" rel="noopener noreferrer">Show credential <span aria-hidden="true">↗</span></a></div>
+                </article>
 
-                <div class="cert-card reveal">
-                    <h3>Python for Data Science, AI & Dev</h3>
-                    <p class="cert-issuer">Issued by IBM | Dec 2025</p>
-                    <a href="https://coursera.org/share/2f6354397455fcbb04be5a930eeac37e" target="_blank" rel="noopener noreferrer" class="cert-link">Show Credential</a>
-                </div>
+                <article class="card cert-card reveal">
+                    <div class="cert-top"><span class="badge">IBM</span></div>
+                    <h3>Python for Data Science, AI &amp; Development</h3>
+                    <p>Issued by IBM | Dec 2025</p>
+                    <div><a class="card-link" href="https://coursera.org/share/2f6354397455fcbb04be5a930eeac37e" target="_blank" rel="noopener noreferrer">Show credential <span aria-hidden="true">↗</span></a></div>
+                </article>
 
-                <div class="cert-card reveal">
+                <article class="card cert-card reveal">
+                    <div class="cert-top"><span class="badge">IBM</span></div>
                     <h3>What is Data Science?</h3>
-                    <p class="cert-issuer">Issued by IBM | Nov 2025</p>
-                    <a href="https://coursera.org/share/41a7edd04a6fbeabdcb8b8c10e1b9891" target="_blank" rel="noopener noreferrer" class="cert-link">Show Credential</a>
-                </div>
+                    <p>Issued by IBM | Nov 2025</p>
+                    <div><a class="card-link" href="https://coursera.org/share/41a7edd04a6fbeabdcb8b8c10e1b9891" target="_blank" rel="noopener noreferrer">Show credential <span aria-hidden="true">↗</span></a></div>
+                </article>
 
-                <div class="cert-card reveal">
+                <article class="card cert-card reveal">
+                    <div class="cert-top"><span class="badge">Meta</span></div>
                     <h3>Introduction to Front-End Development</h3>
-                    <p class="cert-issuer">Issued by Meta | Oct 2025</p>
-                    <a href="https://coursera.org/share/071cd71a0acc00c69099a80418daa6b3" target="_blank" rel="noopener noreferrer" class="cert-link">Show Credential</a>
-                </div>
+                    <p>Issued by Meta | Oct 2025</p>
+                    <div><a class="card-link" href="https://coursera.org/share/071cd71a0acc00c69099a80418daa6b3" target="_blank" rel="noopener noreferrer">Show credential <span aria-hidden="true">↗</span></a></div>
+                </article>
 
-                <div class="cert-card reveal">
+                <article class="card cert-card reveal">
+                    <div class="cert-top"><span class="badge">Meta</span></div>
                     <h3>Introduction to Back-End Development</h3>
-                    <p class="cert-issuer">Issued by Meta | Oct 2025</p>
-                    <a href="https://coursera.org/share/c8f4ad6bbad079f80aa49707b6d2d2cc" target="_blank" rel="noopener noreferrer" class="cert-link">Show Credential</a>
-                </div>
+                    <p>Issued by Meta | Oct 2025</p>
+                    <div><a class="card-link" href="https://coursera.org/share/c8f4ad6bbad079f80aa49707b6d2d2cc" target="_blank" rel="noopener noreferrer">Show credential <span aria-hidden="true">↗</span></a></div>
+                </article>
 
             </div>
         </section>
 
-        <section id="skills">
-            <h2 class="section-title reveal">Skills</h2>
-            <div class="skills-showcase reveal">
+        <!-- ================= CONTACT ================= -->
+        <section id="contact" class="contact">
+            <div class="blob blob-1" aria-hidden="true"></div>
+            <div class="blob blob-2" aria-hidden="true"></div>
 
-                <div class="skill-category-card">
-                    <h3>Programming & Tools</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"/><p>Python</p></div>
-                        <div class="skill-item"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL"/><p>SQL</p></div>
-                        <div class="skill-item"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++"/><p>C++</p></div>
-                        <div class="skill-item"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"/><p>Git</p></div>
+            <div class="contact-inner">
+                <div class="eyebrow reveal">Contact</div>
+                <h2 class="reveal">Let's connect.</h2>
+                <p class="reveal">I'm looking for Summer 2027 internships in software engineering, data engineering, or cybersecurity and IT. I'm a senior at UNT and I've been admitted to UNT's MS in Data Engineering program.</p>
+                <div class="contact-actions reveal">
+                    <a class="btn btn-main" href="mailto:DavidOladipupo@my.unt.edu">Get in touch
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </a>
+                    <a class="btn btn-ghost" href="Oladipupo_David.pdf" download="David_Oladipupo_Resume.pdf">Download resume</a>
+                    <div class="social-links">
+                        <a class="social" href="https://www.linkedin.com/in/david-oladipupo-gideon/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+                        <a class="social" href="https://github.com/oladipupo-david-gideon" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
                     </div>
                 </div>
-
-                <div class="skill-category-card">
-                    <h3>Web</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"/><p>HTML5</p></div>
-                        <div class="skill-item"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"/><p>CSS3</p></div>
-                    </div>
-                </div>
-
-                <div class="skill-category-card">
-                    <h3>Data</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas"/><p>Pandas</p></div>
-                        <div class="skill-item"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/plotly/plotly-original.svg" alt="Plotly"/><p>Plotly</p></div>
-                        <div class="skill-item"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg" alt="Streamlit"/><p>Streamlit</p></div>
-                    </div>
-                </div>
-
             </div>
-        </section>
 
-        <section id="contact">
-            <div class="contact-content reveal">
-                <h2>Let's Connect</h2>
-                <p>I am looking for <strong>Summer 2027 internships</strong> in software engineering, data engineering, or cybersecurity/IT. I am a senior at UNT and have been admitted to UNT's MS in Data Engineering program.</p>
-                <a href="mailto:DavidOladipupo@my.unt.edu" class="cta-button">Get in Touch</a>
-            </div>
+            <!-- Frozen horizon -->
+            <svg class="horizon" viewBox="0 0 1440 360" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+                <defs><linearGradient id="gfoot" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1B2C86"/><stop offset="1" stop-color="#070E26"/></linearGradient></defs>
+                <path fill="url(#gfoot)" d="M0 330 L140 282 L260 318 L400 236 L520 312 L660 262 L780 325 L900 250 L1030 318 L1170 255 L1300 315 L1440 280 L1440 360 L0 360Z"/>
+                <path fill="#F6FAFF" d="M400 236 L427 253 L413 249 L404 250 L391 247 L374 251Z M660 262 L687 276 L673 274 L664 276 L651 270 L634 271Z M900 250 L927 264 L913 261 L904 264 L891 261 L874 266Z M1170 255 L1197 268 L1183 266 L1174 269 L1161 264 L1144 267Z"/>
+            </svg>
+
+            <footer class="footer">
+                <span>&copy; 2026 David Oladipupo.</span>
+                <a class="nav-link" href="#top">Back to top ↑</a>
+            </footer>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; 2026 David Oladipupo.</p>
-    </footer>
 
     <script src="./script.js"></script>
 </body>
