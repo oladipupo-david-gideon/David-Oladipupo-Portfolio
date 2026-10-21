@@ -30,6 +30,7 @@
 @property --g { syntax: '<number>'; inherits: false; initial-value: 0.12; }
 
 /* ---------- Base ---------- */
+:root { color-scheme: dark; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
