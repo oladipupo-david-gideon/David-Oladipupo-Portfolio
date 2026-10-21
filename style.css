@@ -470,10 +470,16 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ice); outline-o
     .about-grid { padding-top: 90px; gap: 48px; }
 }
 
+/* Reduced motion: turn off the heavy, constant motion (aurora, snow, spinning, marquee,
+   drifting shapes, glows, bouncy hovers) but keep gentle one-time fades so the page still feels alive */
+@keyframes fadeOnly { to { opacity: 1; } }
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     *, *::before, *::after { animation: none !important; transition: none !important; }
-    .ch { transform: none !important; }
-    .fade-up, .snowflake, .reveal { opacity: 1 !important; transform: none !important; filter: none !important; }
+
+    /* Gentle fades that stay */
+    .ch { transform: none !important; opacity: 0; animation: fadeOnly 1s ease forwards !important; animation-delay: calc(.2s + var(--i) * .03s) !important; }
+    .fade-up { transform: none !important; animation: fadeOnly .8s ease forwards !important; animation-delay: var(--d, 0s) !important; }
+    .reveal { transform: none !important; filter: none !important; transition: opacity .7s ease !important; }
     .snowflake path { stroke-dashoffset: 0 !important; }
 }

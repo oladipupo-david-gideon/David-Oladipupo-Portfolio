@@ -118,8 +118,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const revealElements = document.querySelectorAll('.reveal');
         if (revealElements.length === 0) return;
 
-        // No animation needed: just show everything
-        if (reducedMotion || !('IntersectionObserver' in window)) {
+        // No observer support: just show everything (reduced motion still gets a gentle fade via CSS)
+        if (!('IntersectionObserver' in window)) {
             revealElements.forEach(el => el.classList.add('visible'));
             return;
         }
